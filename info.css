@@ -140,10 +140,6 @@ main .intro h1 {
         padding: 10px 15px; /* Reduced padding for smaller screens */
     }
 
-    .logo {
-        font-size: 18px; /* Smaller font size for smaller screens */
-    }
-
     .nav-button {
         padding: 6px 10px; /* Smaller padding for smaller screens */
         font-size: 12px; /* Smaller font size for smaller screens */
@@ -197,7 +193,7 @@ main .intro h1 {
     }
 
     .logo {
-        font-size: 16px;
+        font-size: 10px; /* Keep the logo font size the same */
     }
 
     nav {
@@ -235,10 +231,5 @@ main .intro h1 {
 
     .links-container .text {
         text-align: center; /* Center text on extra small screens */
-    }
-}
-
-    .container p, .content, .links-container p, .image-text-container p {
-        font-size: 0.9rem;
     }
 }
