@@ -53,55 +53,85 @@ nav {
     color: white;
 }
 
-/* Main Section */
-main {
-    padding: 20px;
-}
-
-h2 {
+/* Main title adjustments */
+main .intro {
     text-align: center;
+    margin: 30px auto; /* More balanced spacing */
+}
+
+main .intro h1 {
+    font-size: 1.3rem; /* Smaller */
+    font-weight: 600;
     color: #333;
+    text-align: center;
 }
 
-.favorites-container {
+/* Containers with reduced margin */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px 3%; /* Smaller margin */
+    max-width: 1200px;
+}
+
+.container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #000000;
+    text-align: justify;
+}
+
+/* Uniform text styling */
+.container p, .content, .links-container p, .image-text-container p {
+    font-size: 1.1rem; /* Same size for all */
+    text-align: justify; /* Justified text */
+}
+
+/* Benefits section with centered text */
+.benefits-container {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
-.favorite-box {
-    background-color: #eee9df;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+.benefit {
+    flex: 1;
+    min-width: 200px;
+    background-color: #f1f1f1;
     padding: 15px;
-    width: 300px;
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
+    text-align: center; /* Centered text */
 }
 
-.favorite-box iframe {
-    width: 100%;
-    height: 200px;
-    border: none;
-    border-radius: 8px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+.benefit p {
+    text-align: center; /* No justification */
 }
 
-.favorite-box .favorite-btn {
-    position: absolute;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #ff4757;
-    margin-top: 9px;
+/* Image and text alignment */
+.image-text-container, .links-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.favorite-box .favorite-btn.active {
-    color: #ff4757;
+.image-text-container .text, .links-container .text {
+    flex: 2;
+    text-align: justify;
+}
+
+.image-text-container .image, .links-container .image {
+    flex: 1;
+    text-align: center;
+}
+
+.image-text-container img, .links-container img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
 }
 
 /* Media Queries for Smaller Screens (max-width: 768px) */
@@ -118,34 +148,44 @@ h2 {
     main {
         padding: 15px; /* Reduced padding for smaller screens */
     }
+
+    .container {
+        margin: 20px 2%; /* Smaller margin for smaller screens */
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    .container h2 {
+        font-size: 1.5rem; /* Smaller font size for headings */
+    }
+
+    .container p, .content, .links-container p, .image-text-container p {
+        font-size: 1rem; /* Smaller font size for text */
+    }
+
+    .benefits-container {
+        flex-direction: column; /* Stack benefits vertically */
+        gap: 10px; /* Reduce gap between benefits */
+    }
+
+    .benefit {
+        min-width: 100%; /* Full width for benefits */
+    }
+
+    .image-text-container, .links-container {
+        flex-direction: column; /* Stack image and text vertically */
+        gap: 10px; /* Reduce gap between image and text */
+    }
+
+    .image-text-container .text, .links-container .text {
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .image-text-container img, .links-container img {
+        max-width: 100%; /* Full width for images */
+    }
 }
 
-    h2 {
-        font-size: 18px; /* Smaller font size for smaller screens */
-    }
-
-    /* Favorites Container Adjustments */
-    .favorites-container {
-        gap: 15px; /* Reduced gap for smaller screens */
-    }
-
-    .favorite-box {
-        width: 100%; /* Full width for smaller screens */
-        max-width: 300px; /* Max width for smaller screens */
-        padding: 10px; /* Reduced padding for smaller screens */
-    }
-
-    .favorite-box iframe {
-        height: 150px; /* Reduced height for smaller screens */
-    }
-
-    .favorite-box .favorite-btn {
-        font-size: 20px; /* Smaller icon size for smaller screens */
-        right: 8px; /* Adjusted position for smaller screens */
-        margin-top: 7px; /* Adjusted margin for smaller screens */
-    }
-}
-
+/* Media Queries for Extra Small Screens (max-width: 480px) */
 @media (max-width: 480px) {
     header {
         flex-direction: column;
@@ -166,3 +206,30 @@ h2 {
         padding: 5px 8px;
         font-size: 10px;
     }
+
+    main .intro h1 {
+        font-size: 1rem;
+    }
+
+    .container {
+        margin: 10px 1%;
+        padding: 10px;
+    }
+
+    .container h2 {
+        font-size: 1.2rem;
+    }
+
+    .container p, .content, .links-container p, .image-text-container p {
+        font-size: 0.9rem;
+    }
+
+    .links-container {
+        flex-direction: column; /* Stack links vertically */
+        text-align: center; /* Center links on extra small screens */
+    }
+
+    .links-container .text {
+        text-align: center; /* Center text on extra small screens */
+    }
+}
