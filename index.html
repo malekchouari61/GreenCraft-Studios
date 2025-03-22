@@ -43,5 +43,19 @@
             </div>
 
     </main>
+    <script>
+           // Get the profile icon element
+        const profileIcon = document.getElementById('profile-icon');
+
+        // Add a click event listener to the profile icon
+        profileIcon.addEventListener('click', (event) => {
+            // Check if the user is not logged in
+            if (!isUserLoggedIn()) {
+                event.preventDefault(); // Prevent the default link behavior
+                window.location.href = 'account.html'; // Redirect to the registration page
+            }
+        });
+
+    </script>
 </body>
 </html>
