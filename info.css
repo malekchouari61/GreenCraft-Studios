@@ -227,4 +227,18 @@ main .intro h1 {
     .container p, .content, .links-container p, .image-text-container p {
         font-size: 0.9rem;
     }
+
+    .links-container {
+        flex-direction: column; /* Stack links vertically */
+        text-align: center; /* Center links on extra small screens */
+    }
+
+    .links-container .text {
+        text-align: center; /* Center text on extra small screens */
+    }
+}
+
+    .container p, .content, .links-container p, .image-text-container p {
+        font-size: 0.9rem;
+    }
 }
