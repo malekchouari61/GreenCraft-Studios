@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -17,11 +18,10 @@ header {
     background-color: #eee9df;
     padding: 15px 30px;
     border-bottom: none;
-    
 }
 
 .logo {
-    font-size: 20px;
+    font-size: 10px;
     font-weight: bold;
     letter-spacing: 0.5px;
     text-decoration: none;
@@ -52,7 +52,6 @@ nav {
     background-color: black;
     color: white;
 }
-
 
 /* Main section */
 main {
@@ -237,4 +236,16 @@ button:hover {
     align-items: center;
     justify-content: center;
     margin-top: 3px;
+}
+
+/* Media Queries for Smaller Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 15px; /* Reduced padding for smaller screens */
+    }
+
+    .nav-button {
+        padding: 6px 10px; /* Smaller padding for smaller screens */
+        font-size: 12px; /* Smaller font size for smaller screens */
+    }
 }
