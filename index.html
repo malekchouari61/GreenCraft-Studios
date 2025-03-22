@@ -44,7 +44,7 @@
 
     </main>
     <script>
-           // Get the profile icon element
+        // Get the profile icon element
         const profileIcon = document.getElementById('profile-icon');
 
         // Add a click event listener to the profile icon
@@ -54,6 +54,11 @@
                 event.preventDefault(); // Prevent the default link behavior
                 window.location.href = 'account.html'; // Redirect to the registration page
             }
+        });
+
+        // JavaScript to improve reaction time on profile icon click
+        document.getElementById('profile-icon').addEventListener('click', function(event) {
+            window.location.href = 'Utilisateur.html';
         });
 
     </script>
