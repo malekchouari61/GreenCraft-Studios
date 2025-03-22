@@ -56,16 +56,11 @@ nav {
 /* Main Section */
 main {
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
 }
 
 h2 {
     text-align: center;
     color: #333;
-    width: 100%;
-    max-width: 1200px; /* Optional: limit the width of h2 */
 }
 
 .favorites-container {
