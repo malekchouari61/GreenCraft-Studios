@@ -56,11 +56,16 @@ nav {
 /* Main Section */
 main {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
 }
 
 h2 {
     text-align: center;
     color: #333;
+    width: 100%;
+    max-width: 1200px; /* Optional: limit the width of h2 */
 }
 
 .favorites-container {
@@ -103,22 +108,17 @@ h2 {
 .favorite-box .favorite-btn.active {
     color: #ff4757;
 }
-
 /* Media Queries for Smaller Screens (max-width: 768px) */
 @media (max-width: 768px) {
     header {
         padding: 10px 15px; /* Reduced padding for smaller screens */
     }
 
-    .logo {
-        font-size: 18px; /* Smaller font size for smaller screens */
-    }
-
     .nav-button {
         padding: 6px 10px; /* Smaller padding for smaller screens */
         font-size: 12px; /* Smaller font size for smaller screens */
     }
-
+   
     /* Main Section Adjustments */
     main {
         padding: 15px; /* Reduced padding for smaller screens */
