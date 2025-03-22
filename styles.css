@@ -1,0 +1,225 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+    background-image: url('https://hinhneniphone.net/wp-content/uploads/2024/10/hinh-nen-anime-cho-may-tinh-chill-8.jpg');
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    backdrop-filter: brightness(0.5);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: none;
+    background-color: rgba(250, 240, 221, 0.8); /* Semi-transparent */
+    position: relative; /* Ensure header is above the background image */
+    z-index: 1; /* Bring header to the front */
+    margin-bottom: 0;
+}
+
+.logo {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 14px;
+}
+
+.nav-button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Main section */
+main {
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Ensure content is above the background image */
+    z-index: 1; /* Bring content to the front */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#welcome {
+    padding: 80px 20px;
+    border-radius: 15px;
+}
+
+#welcome h2 {
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#welcome p {
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    margin-top: 90px;
+    font-weight: bold;
+}
+
+#start-button {
+    background-color: #a98b72;
+    color: #eee9df;
+    border: none;
+    padding: 20px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    margin-top: 30px;
+}
+
+#start-button:hover {
+    background-color: #7f583c;
+    color: #eee9df;
+}
+
+/* Section Notre Mission */
+#mission {
+    padding: 60px 20px;
+    background-color: rgba(238, 233, 223, 0.8); /* Semi-transparent */
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 1080px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1; /* Ensures the section is above the background image */
+}
+
+.mission-container {
+    text-align: center;
+}
+
+#mission h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#mission p {
+    font-size: 1.1rem;
+    color: #000000;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Media Queries for Smaller Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 15px; /* Reduced padding for smaller screens */
+    }
+
+    .logo {
+        font-size: 18px; /* Smaller font size for smaller screens */
+    }
+
+    .nav-button {
+        padding: 6px 10px; /* Smaller padding for smaller screens */
+        font-size: 12px; /* Smaller font size for smaller screens */
+    }
+    /* Main Section Adjustments */
+    main {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    /* Main section adjustments */
+    main {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    #welcome {
+        padding: 40px 15px; /* Reduced padding for smaller screens */
+    }
+
+    #welcome h2 {
+        font-size: 36px; /* Smaller font size for smaller screens */
+    }
+
+    #welcome p {
+        font-size: 1.1rem; /* Smaller font size for smaller screens */
+        margin-top: 40px; /* Reduced margin for smaller screens */
+    }
+
+    #start-button {
+        padding: 15px 30px; /* Smaller padding for smaller screens */
+        font-size: 16px; /* Smaller font size for smaller screens */
+    }
+
+    /* Mission section adjustments */
+    #mission {
+        padding: 40px 15px; /* Reduced padding for smaller screens */
+    }
+
+    #mission h2 {
+        font-size: 28px; /* Smaller font size for smaller screens */
+    }
+
+    #mission p {
+        font-size: 1rem; /* Smaller font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    #welcome h2 {
+        font-size: 28px; /* Even smaller font size for very small screens */
+    }
+
+    #welcome p {
+        font-size: 1rem; /* Even smaller font size for very small screens */
+        margin-top: 20px; /* Further reduced margin for very small screens */
+    }
+
+    #start-button {
+        padding: 10px 20px; /* Smaller padding for very small screens */
+        font-size: 14px; /* Smaller font size for very small screens */
+    }
+
+    #mission h2 {
+        font-size: 24px; /* Even smaller font size for very small screens */
+    }
+
+    #mission p {
+        font-size: 0.9rem; /* Even smaller font size for very small screens */
+    }
+}

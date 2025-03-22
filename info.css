@@ -1,0 +1,190 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee9df;
+    padding: 15px 30px;
+    border-bottom: none;
+}
+
+.logo {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 14px;
+}
+
+.nav-button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Main title adjustments */
+main .intro {
+    text-align: center;
+    margin: 30px auto; /* More balanced spacing */
+}
+
+main .intro h1 {
+    font-size: 1.3rem; /* Smaller */
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+/* Containers with reduced margin */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px 3%; /* Smaller margin */
+    max-width: 1200px;
+}
+
+.container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #000000;
+    text-align: justify;
+}
+
+/* Uniform text styling */
+.container p, .content, .links-container p, .image-text-container p {
+    font-size: 1.1rem; /* Same size for all */
+    text-align: justify; /* Justified text */
+}
+
+/* Benefits section with centered text */
+.benefits-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.benefit {
+    flex: 1;
+    min-width: 200px;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centered text */
+}
+
+.benefit p {
+    text-align: center; /* No justification */
+}
+
+/* Image and text alignment */
+.image-text-container, .links-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.image-text-container .text, .links-container .text {
+    flex: 2;
+    text-align: justify;
+}
+
+.image-text-container .image, .links-container .image {
+    flex: 1;
+    text-align: center;
+}
+
+.image-text-container img, .links-container img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Media Queries for Smaller Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 15px; /* Reduced padding for smaller screens */
+    }
+
+    .logo {
+        font-size: 18px; /* Smaller font size for smaller screens */
+    }
+
+    .nav-button {
+        padding: 6px 10px; /* Smaller padding for smaller screens */
+        font-size: 12px; /* Smaller font size for smaller screens */
+    }
+    /* Main Section Adjustments */
+    main {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    .container {
+        margin: 20px 2%; /* Smaller margin for smaller screens */
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    .container h2 {
+        font-size: 1.5rem; /* Smaller font size for headings */
+    }
+
+    .container p, .content, .links-container p, .image-text-container p {
+        font-size: 1rem; /* Smaller font size for text */
+    }
+
+    .benefits-container {
+        flex-direction: column; /* Stack benefits vertically */
+        gap: 10px; /* Reduce gap between benefits */
+    }
+
+    .benefit {
+        min-width: 100%; /* Full width for benefits */
+    }
+
+    .image-text-container, .links-container {
+        flex-direction: column; /* Stack image and text vertically */
+        gap: 10px; /* Reduce gap between image and text */
+    }
+
+    .image-text-container .text, .links-container .text {
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .image-text-container img, .links-container img {
+        max-width: 100%; /* Full width for images */
+    }
+}

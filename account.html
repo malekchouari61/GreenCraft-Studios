@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un compte</title>
+    <link rel="stylesheet" href="account.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <!-- Section d'inscription -->
+        <section id="signup">
+            <h2>Créer un compte</h2>
+            <form id="signup-form">
+                <!-- Champ pour l'email -->
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                
+                <!-- Champ pour le mot de passe -->
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" required>
+                
+                <!-- Champ pour confirmer le mot de passe -->
+                <label for="confirm-password">Confirmez le mot de passe :</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                
+                <!-- Message d'erreur -->
+                <p id="error-message" class="error"></p>
+                
+                <!-- Bouton de soumission -->
+                <button type="submit">Inscrivez-vous</button>
+                
+                <!-- Lien pour se connecter -->
+                <p>Vous avez déjà un compte ? <a href="#" id="login-link">Connectez-vous</a></p>
+            </form>
+            
+            <!-- Lien pour continuer sans compte -->
+            <a href="#" id="guest-link">Continuer sans compte</a>
+        </section>
+
+        <!-- Section de connexion (masquée par défaut) -->
+        <section id="login" class="hidden">
+            <h2>Connexion</h2>
+            <form id="login-form">
+                <!-- Champ pour l'email -->
+                <label for="login-email">Email :</label>
+                <input type="email" id="login-email" name="login-email" required>
+                
+                <!-- Champ pour le mot de passe -->
+                <label for="login-password">Mot de passe :</label>
+                <input type="password" id="login-password" name="login-password" required>
+                
+                <!-- Message d'erreur -->
+                <p id="login-error-message" class="error"></p>
+                
+                <!-- Bouton de soumission -->
+                <button type="submit">Se connecter</button>
+            </form>
+            
+            <!-- Lien pour revenir à l'inscription -->
+            <p>Vous n'avez pas de compte ? <a href="#" id="signup-link">Inscrivez-vous</a></p>
+        </section>
+    </main>
+
+    <!-- Notification -->
+    <div id="notification" class="hidden"></div>
+    
+    <script>
+    // Vérifier si l'utilisateur est déjà connecté au chargement de la page
+    window.onload = function() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+            if (isLoggedIn === 'true') {
+                // Rediriger vers la page de profil si l'utilisateur est déjà connecté
+                window.location.href = 'Utilisateur.html';
+            }
+        };
+
+        // Fonction pour afficher une notification
+        function showNotification(message, color) {
+            let notification = document.getElementById("notification");
+            notification.textContent = message;
+            notification.style.backgroundColor = color;
+            notification.classList.remove("hidden");
+            setTimeout(() => notification.classList.add("hidden"), 3000); // Masquer après 3 secondes
+        }
+
+        // Fonction pour valider l'email
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Fonction pour valider le mot de passe
+        function isValidPassword(password) {
+            const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+            return passwordRegex.test(password);
+        }
+
+        // Basculer entre l'inscription et la connexion
+        document.getElementById("login-link").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById("signup").classList.add("hidden");
+            document.getElementById("login").classList.remove("hidden");
+        });
+
+        document.getElementById("signup-link").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById("login").classList.add("hidden");
+            document.getElementById("signup").classList.remove("hidden");
+        });
+
+        // Vérifier si les mots de passe correspondent
+        document.getElementById("confirm-password").addEventListener("input", function() {
+            const password = document.getElementById("password").value;
+            const confirmPassword = this.value;
+            const matchMessage = document.getElementById("password-match-message");
+
+            if (password === confirmPassword) {
+                matchMessage.textContent = "Les mots de passe correspondent !";
+                matchMessage.style.color = "green";
+            } else {
+                matchMessage.textContent = "Les mots de passe ne correspondent pas.";
+                matchMessage.style.color = "red";
+            }
+        });
+
+        // Gestion de la soumission du formulaire d'inscription
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+
+            // Récupérer les valeurs du formulaire
+            const email = document.getElementById("email").value.trim(); // Supprimer les espaces
+            const password = document.getElementById("password").value.trim(); // Supprimer les espaces
+            const confirmPassword = document.getElementById("confirm-password").value.trim(); // Supprimer les espaces
+            const errorMessage = document.getElementById("error-message");
+
+            // Réinitialiser le message d'erreur
+            errorMessage.textContent = "";
+
+            // Valider l'email
+            if (!isValidEmail(email)) {
+                errorMessage.textContent = "Veuillez entrer une adresse email valide.";
+                errorMessage.style.color = "red";
+                return;
+            }
+
+            // Vérifier si les mots de passe correspondent
+            if (password !== confirmPassword) {
+                errorMessage.textContent = "Les mots de passe ne correspondent pas.";
+                errorMessage.style.color = "red";
+                return;
+            }
+
+            // Sauvegarder les informations dans le localStorage
+            if (localStorage.getItem("users")) {
+                let users = JSON.parse(localStorage.getItem("users"));
+                users.push({email: email, password: password});
+                localStorage.setItem("users", JSON.stringify(users));
+            } else {
+                localStorage.setItem("users", JSON.stringify([{email: email, password: password}]));
+            }
+
+
+            // Marquer l'utilisateur comme connecté
+            localStorage.setItem("isLoggedIn", "true");
+            localStorage.setItem("currentUser", email);
+            localStorage.removeItem("isGuest"); // Supprimer l'état d'invité
+
+
+            // Afficher une notification de succès
+            showNotification("Félicitations ! 🎉 Votre compte a été créé avec succès.", "green");
+
+            // Rediriger vers la page de profil après 1 seconde
+            setTimeout(() => {
+                window.location.href = "Utilisateur.html"; // Redirection vers la page de profil
+            }, 1000);
+        });
+
+        // Gestion de la soumission du formulaire de connexion
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Récupérer les valeurs du formulaire
+            const email = document.getElementById("login-email").value.trim().toLowerCase();
+            const password = document.getElementById("login-password").value.trim();
+            const errorMessage = document.getElementById("login-error-message");
+
+            // Réinitialiser le message d'erreur
+            errorMessage.textContent = "";
+
+            // Récupérer les informations stockées dans le localStorage
+            const users = JSON.parse(localStorage.getItem("users")) || [];
+            const user = users.find(user => user.email === email && user.password === password);
+
+            // Vérifier si l'utilisateur existe dans le localStorage
+            if (user) {
+                // Marquer l'utilisateur comme connecté
+                localStorage.setItem("isLoggedIn", "true");
+                localStorage.setItem("currentUser", email);
+                localStorage.removeItem("isGuest"); // Supprimer l'état d'invité
+
+                // Afficher une notification de succès
+                showNotification("Connexion réussie ! Bienvenue.", "green");
+
+                // Rediriger vers la page de profil après 1 seconde
+                setTimeout(() => {
+                    window.location.href = "Utilisateur.html";
+                }, 1000);
+            } else {
+                errorMessage.textContent = "Email ou mot de passe incorrect.";
+                errorMessage.style.color = "red";
+            }
+        });
+
+        // Gestion du lien "Continuer sans compte"
+        document.getElementById("guest-link").addEventListener("click", function(event) {
+            event.preventDefault();
+            // Marquer l'utilisateur comme invité
+            localStorage.setItem("isGuest", "true");
+
+            // Marquer l'utilisateur comme déconnecté
+            localStorage.setItem("isLoggedIn", "false");
+
+            // Afficher une notification
+            showNotification("Vous naviguez en tant qu’invité(e). Créez un compte pour accéder aux fonctionnalités exclusives !", "blue");
+
+            // Rediriger vers la page des projets après 1 seconde
+            setTimeout(() => {
+                window.location.href = "projets.html";
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoris - GreenCraft Studios</title>
+    <link rel="stylesheet" href="favoris1.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <h1>GREENCRAFT STUDIOS</h1>
+        </a>
+        <nav>
+            <div class="nav-buttons">
+                <a href="info.html" class="nav-button">POURQUOI L’UPCYCLING ET LE DIY?</a>
+                <a href="projets.html" class="nav-button">PROJETS</a>
+                <a href="favoris.html" class="nav-button">FAVORIS</a>
+                <a href="Utilisateur.html" class="nav-button profile-icon" id="profile-icon">👤</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2>VOS VIDÉOS FAVORIS</h2>
+        <div id="favorites-container" class="favorites-container">
+            <!-- Les vidéos favorites seront injectées ici dynamiquement -->
+        </div>
+    </main>
+
+    <script>
+ // Fonction pour vérifier si l'utilisateur est connecté
+function isUserLoggedIn() {
+    return localStorage.getItem("isLoggedIn") === "true";
+}
+
+// Fonction pour vérifier si l'utilisateur est en mode invité
+function isGuestMode() {
+    return localStorage.getItem("isGuest") === "true";
+}
+
+// Fonction pour afficher un message d'erreur
+function showLoginMessage() {
+    const loginErrorMessage = document.getElementById("login-error-message");
+    if (loginErrorMessage) {
+        loginErrorMessage.style.display = "block";
+        setTimeout(() => {
+            loginErrorMessage.style.display = "none";
+        }, 3000); // Masquer le message après 3 secondes
+    }
+}
+
+  // Get the profile icon element
+  const profileIcon = document.getElementById('profile-icon');
+
+// Add a click event listener to the profile icon
+profileIcon.addEventListener('click', (event) => {
+    // Check if the user is not logged in
+    if (!isUserLoggedIn()) {
+        event.preventDefault(); // Prevent the default link behavior
+        window.location.href = 'account.html'; // Redirect to the registration page
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const favoritesContainer = document.getElementById('favorites-container');
+    const profileIcon = document.getElementById('profile-icon');
+
+    function loadFavorites() {
+        favoritesContainer.innerHTML = ''; // Clear the container
+        let hasFavorites = false;
+        const currentUser = localStorage.getItem("currentUser");
+
+        if (!currentUser) {
+            // If no user is logged in, display a message
+            const message = document.createElement('p');
+            message.textContent = 'Créer un compte pour ajouter des projets en favoris !';
+            favoritesContainer.appendChild(message);
+            console.log("No user logged in. Displaying message."); // Debugging
+            return;
+        }
+
+        const userFavorites = JSON.parse(localStorage.getItem(`favorites-${currentUser}`)) || {};
+
+        Object.keys(userFavorites).forEach(title => {
+            const projectData = userFavorites[title];
+
+            if (projectData) {
+                console.log("Loading favorite project:", projectData.title, projectData.videoUrl); // Debugging
+
+                const favoriteBox = document.createElement('div');
+                favoriteBox.classList.add('favorite-box');
+                favoriteBox.innerHTML = 
+                    `<iframe src="${projectData.videoUrl}" frameborder="0" allowfullscreen></iframe>
+                    <button class="favorite-btn active">&#10084;</button>`;
+                favoritesContainer.appendChild(favoriteBox);
+
+                const favoriteBtn = favoriteBox.querySelector('.favorite-btn');
+                favoriteBtn.addEventListener('click', () => {
+                    removeFromFavorites(title);
+                    favoriteBox.remove(); // Remove the video from the page
+                    loadFavorites(); // Reload favorites to check if any are left
+                });
+
+                hasFavorites = true;
+            }
+        });
+
+        // Display a message if there are no favorites
+        if (!hasFavorites) {
+            const message = document.createElement('p');
+            message.textContent = 'Aucun favoris pour le moment !';
+            favoritesContainer.appendChild(message);
+            console.log("No favorites found. Displaying message."); // Debugging
+        }
+    }
+
+    // Remove a video from favorites
+    function removeFromFavorites(title) {
+        const currentUser = localStorage.getItem("currentUser");
+        if (!currentUser) return;
+
+        const userFavorites = JSON.parse(localStorage.getItem(`favorites-${currentUser}`)) || {};
+        delete userFavorites[title];
+        localStorage.setItem(`favorites-${currentUser}`, JSON.stringify(userFavorites));
+        console.log(`Removed ${title} from favorites.`); // Debugging
+    }
+
+    // Load favorites when the page loads
+    loadFavorites();
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Compte - GreenCraft Studios</title>
+    <link rel="stylesheet" href="utilisateur.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <h1>GREENCRAFT STUDIOS</h1>
+        </a>
+        <nav>
+            <div class="nav-buttons">
+                <a href="info.html" class="nav-button">POURQUOI L’UPCYCLING ET LE DIY?</a>
+                <a href="projets.html" class="nav-button">PROJETS</a>
+                <a href="favoris.html" class="nav-button">FAVORIS</a>
+                <a href="Utilisateur.html" class="nav-button profile-icon">👤</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="account-container">
+            <!-- Conteneur principal du profil -->
+            <div class="profile-container">
+                <!-- Photo de profil -->
+                <div class="profile-picture">
+                    <label for="upload-profile-picture">
+                        <img src="https://www.example.com/default-profile.jpg" alt="Photo de Profil" id="profile-img">
+                    </label>
+                    <input type="file" id="upload-profile-picture" accept="image/*" style="display: none;">
+                </div>
+                
+                <!-- Informations du profil -->
+                <div class="profile-info">
+                    <div class="profile-field">
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" value="user@example.com" disabled>
+                    </div>
+                    <div class="profile-field">
+                        <label for="password">Mot de Passe :</label>
+                        <div class="password-field">
+                            <input type="password" id="password" value="******" disabled>
+                            <button class="password-toggle" onclick="togglePasswordVisibility()">👁️</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boutons d'action -->
+            <div class="buttons-container">
+                <button id="edit-profile">Modifier le profil</button>
+                <button id="logout">Déconnectez-vous</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+     // Vérifier si l'utilisateur est connecté au chargement de la page
+     window.onload = function() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+            if (isLoggedIn !== 'true') {
+                // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
+                window.location.href = 'account.html';
+                return;
+            }
+
+            // Charger les informations du profil si l'utilisateur est connecté
+            const currentUser = localStorage.getItem('currentUser');
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const user = users.find(user => user.email === currentUser);
+
+            if (user) {
+                document.getElementById('email').value = user.email;
+                document.getElementById('password').value = user.password;
+            }
+
+            const profilePicture = localStorage.getItem(`profilePicture-${currentUser}`);
+            if (profilePicture) {
+                document.getElementById('profile-img').src = profilePicture;
+            }
+        };
+
+        // Fonction pour activer/désactiver la modification du mot de passe
+        document.getElementById('edit-profile').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+
+            // Activer ou désactiver le champ du mot de passe
+            if (passwordInput.disabled) {
+                passwordInput.disabled = false; // Activer le champ du mot de passe
+                this.textContent = 'Sauvegarder';
+            } else {
+                // Sauvegarder le nouveau mot de passe dans le localStorage
+                const newPassword = passwordInput.value;
+                const currentUser = localStorage.getItem('currentUser');
+                const users = JSON.parse(localStorage.getItem('users')) || [];
+                const user = users.find(user => user.email === currentUser);
+
+                if (user) {
+                    user.password = newPassword;
+                    localStorage.setItem('users', JSON.stringify(users));
+                }
+
+                // Désactiver le champ du mot de passe après la sauvegarde
+                passwordInput.disabled = true;
+                this.textContent = 'Modifier le profil';
+
+                alert('Mot de passe mis à jour avec succès !');
+            }
+        });
+
+        // Fonction pour se déconnecter
+        document.getElementById('logout').addEventListener('click', function() {
+            // Supprimer l'état de connexion de l'utilisateur
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('currentUser');
+
+            // Afficher un message de déconnexion
+            alert('Vous êtes maintenant déconnecté.');
+
+            // Rediriger vers la page de connexion
+            window.location.href = 'index.html';
+        });
+
+        // Gestion du téléchargement de la photo de profil
+        document.getElementById('upload-profile-picture').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const profileImg = document.getElementById('profile-img');
+                    profileImg.src = e.target.result;
+
+                    // Sauvegarder la photo dans le localStorage associée à l'utilisateur actuel
+                    const currentUser = localStorage.getItem('currentUser');
+                    localStorage.setItem(`profilePicture-${currentUser}`, e.target.result);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Fonction pour basculer l'affichage du mot de passe
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const toggleButton = document.querySelector('.password-toggle');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleButton.textContent = '🙈';
+            } else {
+                passwordInput.type = 'password';
+                toggleButton.textContent = '👁️';
+            }
+        }
+    </script>
+</body>
+</html>

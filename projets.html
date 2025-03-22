@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenCraft Studios</title>
+    <link rel="stylesheet" href="projets2.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <h1>GREENCRAFT STUDIOS</h1>
+        </a>
+        <nav>
+            <div class="nav-buttons">
+                <a href="info.html" class="nav-button">POURQUOI L’UPCYCLING ET LE DIY?</a>
+                <a href="projets.html" class="nav-button">PROJETS</a>
+                <a href="favoris.html" class="nav-button">FAVORIS</a>
+                <a href="Utilisateur.html" class="nav-button profile-icon" id="profile-icon">👤</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2>INSPIREZ-VOUS AVEC NOS IDÉES POUR TOUS LES GOÛTS !</h2>
+
+        <div class="slider-container">
+            <!-- Left Arrow -->
+            <button class="arrow-button left-arrow" onclick="slideLeft()">&#10094;</button>
+
+            <!-- Slider Boxes with Videos -->
+            <div class="slider">
+            
+                <div class="slider-box" data-title="7 idées pour recyclés vos t-shirts👕" data-description="Apprenez à transformer vos t-shirts usés en pièces uniques avec ces 7 idées de upcycle sans couture. Faciles et créatives, ces projets donneront une nouvelle vie à vos vieux vêtements !">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/GAoSGQoL4pw?si=crwGEsk4KycOhjtl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+                <div class="slider-box" data-title="90 idées de cadeaux DIY et pas cher 🎁" data-description="Ce tutoriel vous présente des idées de cadeaux DIY et abordables, à la fois mignons et créatifs. Parfaites pour surprendre vos proches avec des présents faits maison et pleins de charme !">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HpDHJqaDPjw?si=Kzksr0ObdWJemQM7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <div class="slider-box" data-title="Décoration créative de chambre DIY🌷" data-description="Découvrez 7 idées simples et économiques pour créer une déco de chambre tendance inspirée de Pinterest. Facile à réaliser, ces DIY ajoutent une touche personnelle et mignonne à votre espace !!">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YXR_hINDqV0?si=u1cgLEbT-Kp6lO8B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+                <div class="slider-box" data-title="Ne jetez plus jamais vos vieux jeans👖" data-description="Ce tutoriel vous montre comment transformer 6 pièces de friperie et vous partage plus de 30 idées créatives pour styliser le denim. Laissez-vous inspirer pour ressortir ces jeans oubliés de votre placard !">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TEtpCWTKyV0?si=_D1FZggd0uYCN0yT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <div class="slider-box" data-title="+50 idées de bricolage🖌️" data-description="Tu cherches des idées originales pour bricoler et exprimer ta créativité ? Dans ce tutoriel, découvre plus de 50 projets DIY variés, faciles à réaliser avec des matériaux que tu as peut-être déjà chez toi ! Ces idées t'inspireront pour personnaliser ton espace avec des créations uniques">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zhspvvX1BPk?si=u0mtcyF6nSMa18BK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <div class="slider-box" data-title="20 DIY esthétiques ☕" data-description="Ajoute une touche unique à ton quotidien avec 20 idées DIY élégantes et tendances ! Déco, accessoires, papeterie… Des projets simples à réaliser pour un résultat esthétique et personnalisé. Suis les étapes et crée à ton style ! ">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6d5ZWLEV-2c?si=82s3qveuXWOCBXX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <!-- Video 5 -->
+                <div class="slider-box" data-title="10 idées cadeaux DIY esthétiques🧸" data-description="Ce tutoriel vous présente 10 idées de cadeaux DIY esthétiques, à la fois simples à réaliser et super tendance. Parfaits pour offrir des présents faits maison, à la fois beaux et pratiques, qui feront sensation !">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/IDNH28PPx2M?si=9gjXnIQgyHD-f_ht" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- Right Arrow -->
+            <button class="arrow-button right-arrow" onclick="slideRight()">&#10095;</button>
+        </div>
+
+        <!-- Popup for Video Details -->
+        <div id="video-popup" class="popup hidden">
+            <div class="popup-content">
+                <!-- Video Container (Left Side) -->
+                <div class="popup-left">
+                    <iframe id="popup-video" width="500" height="300" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <!-- Info Container (Right Side) -->
+                <div class="popup-right">
+                    <!-- Title -->
+                    <h3 id="popup-title">Video Title</h3>
+
+                    <!-- Rating and Favorite Button -->
+                    <div class="rating-favorite-container">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+
+                    <!-- Description -->
+                    <p id="popup-description">Video description goes here.</p>
+
+                    <!-- Comment Section -->
+                    <div class="comment-section">
+                        <textarea id="comment-box" placeholder="Ajoutez un commentaire..."></textarea>
+                        <button id="submit-comment">Envoyer</button>
+                        <div id="comments-container"></div> <!-- Nouvelle section pour afficher les commentaires -->
+                    </div>
+            
+
+            <!-- Close Button -->
+            <button class="close-btn" onclick="closePopup()">X</button>
+        </div>
+    </main>
+    
+    <div class="filter-section">
+        <button id="filter-btn">FILTRER VOS OPTIONS ▼</button>
+        <div id="filter-menu" class="filter-menu hidden">
+            <button class="filter-option" data-filter="type">PAR TYPE</button>
+            <button class="filter-option" data-filter="material">PAR MATÉRIEL</button>
+            <button id="reset-filter" class="filter-option">ANNULER</button>
+        </div>
+        <!-- Subcategories for PAR TYPE -->
+        <div id="type-subcategories" class="filter-submenu hidden">
+            <button class="filter-option" data-type="mode-accessoires">Mode & Accessoires</button>
+            <button class="filter-option" data-type="deco-ameublement">Déco & Ameublement</button>
+            <button class="filter-option" data-type="objets-organisation">Objets du quotidien & Organisation</button>
+            <button class="filter-option" data-type="art-creation">Art & Création</button>
+        </div>
+        <!-- Subcategories for PAR MATÉRIEL -->
+        <div id="material-subcategories" class="filter-submenu hidden">
+            <button class="filter-option" data-material="textiles-vetements">Textiles & vêtements</button>
+            <button class="filter-option" data-material="bois-palettes">Bois & palettes</button>
+            <button class="filter-option" data-material="verre-plastique">Verre & Plastique</button>
+            <button class="filter-option" data-material="papier-carton">Papier & carton</button>
+        </div>
+    </div>
+    <!-- DIY Section -->
+        <section class="category-section">
+            <div class="category-container">
+                <!-- DIY - Organisateur de bureau 💼 -->
+                <div class="category-box" data-title="DIY - Organisateur de bureau 💼" data-description="Dans ce tutoriel, apprends à fabriquer un organisateur de bureau pratique et esthétique en utilisant des matériaux recyclés ! Tu pourras ranger stylos, carnets et accessoires tout en donnant une seconde vie à des objets du quotidien."
+                     data-type="objets-organisation" data-material="papier-carton">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/lxBbJKS8gBw?si=Axfmqj61dpc8IBCs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <div class="category-box" data-title="Journal DIY 📰" data-description="Personnalise ton propre journal avec des techniques simples et créatives. Choisis tes couleurs, ajoute des illustrations et rends-le unique à ton style. Un projet parfait pour organiser tes pensées avec une touche artistique."
+                     data-type="art-creation" data-material="papier-carton">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/4SSS3VZP5BA?si=sRJ9pK8L1Rb6e-nn" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <!-- Lampe avec bouteilles en plastique🏮 -->
+                <div class="category-box" data-title="Lampe avec bouteilles en plastique🏮" data-description="Transforme des bouteilles en plastique en une lampe originale et éco-responsable ! Ce DIY simple et amusant te permet de créer une source de lumière unique pour ta chambre ou ton salon, tout en recyclant des matériaux du quotidien."
+                     data-type="deco-ameublement" data-material="verre-plastique">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/RDiExkraYOg?si=BgYaYdaHBkv1VATo" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <!-- Décoration murale en carton🪴 -->
+                <div class="category-box" data-title="Décoration murale en carton🪴" data-description="Crée une décoration murale originale et personnalisée avec du carton recyclé ! Ce DIY facile à réaliser ajoute une touche artistique à tes murs tout en étant respectueux de l'environnement."
+                     data-type="deco-ameublement" data-material="papier-carton">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/GWtUT2N7Eq0?si=KgzLpn2ky0dcbgws" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <div class="category-box" data-title="DIY stickers 🌺" data-description="Crée tes propres stickers facilement avec du papier adhésif ou du papier normal et du ruban adhésif. Dessine, découpe et colle pour customiser tes carnets, coques de téléphone ou tout autre objet."
+                     data-type="art-creation" data-material="papier-carton">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/r0jbPu-o7iw?si=R0yAi1fRlVUNYPnd" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <div class="category-box" data-title="Porte-clés DIY 🔑" data-description="Crée un porte-clés unique en utilisant de la colle chaude et des illustrations imprimées de feuilles ou autres motifs. Il suffit de découper tes images préférées, de les coller sur la base et d'ajouter un anneau pour avoir un porte-clés personnalisé et original."
+                     data-type="art-creation-accessoires" data-material="papier-carton">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/lNi--qd72QA?si=XBnHmW75CCg42TWN" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <!--  Cadeaux Mignons 🎀 -->
+                <div class="category-box" data-title="DIY Cadeaux Mignons 🎀" data-description="Envie d'offrir un cadeau adorable et fait main ? Ce tutoriel te donne des idées simples et créatives pour fabriquer des présents mignons et personnalisés."
+                     data-type="art-creation" data-material="papier-carton">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/wvaqCgsWEgs?si=aY3FI6SHOSfNrBo7" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <div class="category-box" data-title="Plastic Bottle Flower 🌸" data-description="Crée de magnifiques fleurs en découpant et coloriant des bouteilles en plastique. Facile à faire, ces fleurs ajouteront une touche colorée et originale à ta déco."
+                     data-type="art-creation-deco" data-material="plastique-verre">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/nsS3o9OvCz8?si=ADEeZZHrjUb7urRJ" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <div class="category-box" data-title="DIY cadeaux d'anniversaire 🎊" data-description="Crée un cadeau personnalisé et unique pour un anniversaire ! Que ce soit des objets décoratifs, des accessoires faits main ou des créations gourmandes, ces idées DIY apporteront une touche spéciale à ton cadeau."
+                     data-type="art-creation" data-material="papier-carton">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/pToc2RA_ok4?si=rEp_bO0V2Qd6aF9l" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <div class="category-box" data-title="DIY accessoires 🌟" data-description="Crée des accessoires uniques pour compléter ton look ! Que ce soit des bracelets, des colliers ou des chapeaux, ces projets DIY simples te permettront de personnaliser tes accessoires avec style."
+                     data-type="mode-accessoires" data-material="textiles-vetements">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/75vNEaPmOm4?si=BGGCNAMChgNruoWb" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <div class="category-box" data-title="5 Idées de bricolage en carton✂️" data-description="Découvre 5 idées créatives et pratiques pour recycler du carton en objets utiles et décoratifs. Que ce soit pour des rangements, des décorations ou des accessoires, ces projets sont parfaits pour t’amuser tout en réduisant tes déchets !"
+                     data-type="art-creation" data-material="papier-carton">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/mF6xMLbrJ3k?si=0SDtuzhX15R4gZ1k" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <!-- Décoration avec bouteilles🏺 -->
+                <div class="category-box" data-title="Décoration avec bouteilles🏺" data-description="Donne une nouvelle vie à tes bouteilles en verre en les transformant en objets de décoration raffinés. Que ce soit pour créer des vases ou des objets décoratifs uniques, ce DIY est une façon idéale pour embellir ton intérieur."
+                     data-type="deco-ameublement" data-material="verre-plastique">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/_wb34sVeQlA?si=LlK1uVvITJdNgdxS" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <div class="category-box" data-title="14 idées d'art de bouteille 🍾" data-description="Transforme des bouteilles en objets créatifs et utiles ! Découvre des projets pour réutiliser les bouteilles en plastique, en verre et crée des décorations, des vases, ou même des lampes. Une façon éco-friendly et artistique de recycler."
+                data-type="deco-ameublement-art" data-material="verre-plastique">
+               <iframe width="100%" height="120" src="https://www.youtube.com/embed/gF5ezisCzYM?si=YXZNbaPjdtj3r-xC" frameborder="0" allowfullscreen></iframe>
+               <div class="video-details">
+                   <div class="rating"></div>
+                   <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <div class="category-box" data-title="DIY Plateaux en argile 🧑‍🎨" data-description="Modeler des plateaux en argile est une façon facile et élégante d’ajouter une touche artisanale à ta déco. Peins-les, vernis-les et utilise-les pour ranger tes bijoux, clés ou autres petits objets."
+                     data-type="deco-ameublement" data-material="palettes-bois">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/Nb7CayXr9hQ?si=Snohh9B-Dgf0uSEi" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <!-- Cadeaux DIY uniques🎁 -->
+                <div class="category-box" data-title="Cadeaux DIY uniques🎁" data-description="Surprends tes proches avec des cadeaux faits main et personnalisés. Ce DIY t’offre des idées uniques pour créer des présents significatifs tout en y mettant ton empreinte personnelle et beaucoup d'amour."
+                     data-type="art-creation" data-material="papier-carton">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/ukyiDSL3l10?si=oFNbzAH6cfmXcoSV" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <!-- 150 idées de décoration intérieure 🖼️ -->
+                <div class="category-box" data-title="150 idées de décoration intérieure 🖼️" data-description="Tu cherches l'inspiration pour transformer ton espace ? Découvre 150 idées de décoration intérieure qui mêlent créativité, bricolage et recyclage. Des astuces simples et efficaces pour décorer chaque coin de ta maison à moindre coût, tout en ajoutant une touche personnelle et unique."
+                     data-type="deco-ameublement" data-material="verre-plastique">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/AALXvespDPw?si=tbzEX6k7wxsLPbOA" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <div class="button-container">
+            <button id="show-upcycling-btn">Plus d'idées ▼</button>
+        </div>
+
+        <!-- Upcycling Section -->
+        <section id="upcycling-section" class="category-section">
+            <div class="category-container">
+                <!-- 7 recyclages de jeans👖 -->
+                <div class="category-box" data-title="7 recyclages de jeans👖" data-description="Ne jette plus tes vieux jeans ! Avec ces 7 idées de recyclage, transforme-les en accessoires tendance, objets déco ou même nouveaux vêtements. Une façon simple et créative de donner une seconde vie au denim tout en réduisant le gaspillage."
+                     data-type="mode-accessoires" data-material="textiles-vetements">
+                    <iframe width="80%" height="120" src="https://www.youtube.com/embed/uSMrqygBkjg?si=kd5wVdkI21cwCec1" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <!-- DIY avec vieille chemise 👔 -->
+                <div class="category-box" data-title="DIY avec vieille chemise 👔" data-description="Ne laisse pas tes vieilles chemises prendre la poussière ! Avec ce tutoriel, apprends à les transformer en accessoires stylés. C'est un moyen créatif et économique de donner une seconde vie à tes vêtements tout en restant à la mode."
+                     data-type="mode-accessoires" data-material="textiles-vetements">
+                    <iframe width="80%" height="120" src="https://www.youtube.com/embed/dS3tvvx4LIg?si=cnP6lndncjz3sh_M" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <!-- Transformer vos vêtements 👚 -->
+                <div class="category-box" data-title="Transformer vos vêtements 👚" data-description="Tes vêtements ne te plaisent plus ? Avant de t’en débarrasser, pense à les transformer ! Avec quelques astuces simples, tu peux leur donner un tout nouveau style ou les recycler en accessoires utiles, tout en évitant le gaspillage textile."
+                     data-type="mode-accessoires" data-material="textiles-vetements">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/4J5oaBA9R10?si=7BffKPVu2YAf3Z-S" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+
+                <div class="category-box" data-title="Moderniser un meuble 🔨" data-description="Redonne vie à tes vieux meubles avec des techniques simples comme la peinture, le décapage ou l'ajout de nouvelles poignées. Une façon facile de moderniser ton intérieur sans dépenser beaucoup."
+                     data-type="deco-ameublement-organisation" data-material="bois-palettes">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/gI3ErZ4Nc_o?si=zxgBZdJvcmQ32XmJ" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <div class="category-box" data-title="Upcycling jeans en sacs 🎒" data-description="Transforme tes vieux jeans en sacs tendance ! Découpe, couds et personnalise-les pour créer un sac unique et écologique, parfait pour tes sorties."
+                     data-type="mode-accessoires" data-material="textiles-vetements">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/dyHWeg9wgYM?si=9Fyppz366QbpEPDw" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <div class="category-box" data-title="Upcycling vieux pull 🧥" data-description="Transforme tes vieux pulls en accessoires mode ou en objets décoratifs. Coupe, couds ou tricote pour donner une nouvelle vie à des vêtements oubliés."
+                     data-type="mode-accessoires" data-material="textiles-vetements">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/nw6viYUGDf0?si=JVgFSF837TTnDk4j" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <div class="category-box" data-title="De la poubelle au trésor 💐" data-description="Recycle de vieux pots en verre en les transformant en vases, porte-bougies ou rangements. Un moyen créatif de donner une seconde vie à ces objets."
+                     data-type="deco-ameublement-art-creation" data-material="verre-plastique">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/yToD2FTQnXg?si=SP8SMnufbtcpKFzl" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <div class="category-box" data-title="Lanterne DIY🕯️" data-description="Crée une lanterne personnalisée avec des bocaux en verre, des fils métalliques ou du papier décoratif. Parfait pour ajouter une ambiance chaleureuse à ta maison."
+                     data-type="deco-ameublement-art-creation" data-material="plastique-verre">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/2RsiZsIv7s8?si=ZsMbxxMywj-Trafi" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+                <!-- Récyclez du papier stocké 📜 -->
+                <div class="category-box" data-title="Récyclez du papier stocké 📜" data-description="Trop de papier qui traîne chez toi ? Plutôt que de le jeter, transforme-le en objets créatifs et utiles ! De la fabrication de carnets faits main aux décorations originales, découvre comment donner une seconde vie à ces feuilles oubliées."
+                     data-type="art-creation" data-material="papier-carton">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/PwR9Cvb2AOc?si=4FUFF4gsN89LYd-_" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <div class="category-box" data-title="Décoration de bouteille usagées💡" data-description="Transforme des bouteilles vides en objets déco stylés ! Peins-les, décore-les avec des tissus ou des rubans, et utilise-les comme vases, porte-bougies ou luminaires. Une façon créative et éco-friendly de réutiliser."
+                data-type="deco-ameublement" data-material="verre-plastique">
+               <iframe width="100%" height="120" src="https://www.youtube.com/embed/iwDV1uPLOFk?si=yuZI2oyyIxdSlfgp" frameborder="0" allowfullscreen></iframe>
+               <div class="video-details">
+                   <div class="rating"></div>
+                   <button class="favorite-btn">&#10084;</button>
+               </div>
+           </div>
+
+           <div class="category-box" data-title="Upcycling chemise ancienne👔" data-description="Donne une nouvelle vie à tes vieilles chemises en les transformant en accessoires, comme des coussins, des sacs ou même des t-shirts stylés. Une belle manière de réinventer ton garde-robe."
+           data-type="mode-accessoires" data-material="textiles-vetements">
+          <iframe width="100%" height="120" src="https://www.youtube.com/embed/F-w1uURAnzs?si=GFvNP5dyHozY7xAk" frameborder="0" allowfullscreen></iframe>
+          <div class="video-details">
+              <div class="rating"></div>
+              <button class="favorite-btn">&#10084;</button>
+          </div>
+      </div>
+
+      <div class="category-box" data-title="Upcyling vêtements d’occasion ⚜️" data-description="Recycle tes vêtements usagés en créations uniques ! Que ce soit en les transformant en nouveaux looks ou en accessoires, l’upcycling est une excellente façon de donner une seconde chance à tes habits."
+      data-type="mode-accessoires" data-material="textiles-vetements">
+     <iframe width="100%" height="120" src="https://www.youtube.com/embed/8B7EnxEtCPM?si=Ipd1bPn12GQosgoR" frameborder="0" allowfullscreen></iframe>
+     <div class="video-details">
+         <div class="rating"></div>
+         <button class="favorite-btn">&#10084;</button>
+     </div>
+ </div>
+
+
+ <div class="category-box" data-title="Upcyling bijoux💎" data-description="Crée des bijoux uniques à partir de matériaux récupérés, comme des perles, des boutons ou des chaînes anciennes. Personnalise-les à ton goût pour avoir des pièces originales et écologiques."
+ data-type="accessoires-mode" data-material="verre-plastique">
+<iframe width="100%" height="120" src="https://www.youtube.com/embed/jL09fA4uCBc?si=KCUs4lR3pW1FLph3" frameborder="0" allowfullscreen></iframe>
+<div class="video-details">
+    <div class="rating"></div>
+    <button class="favorite-btn">&#10084;</button>
+</div>
+</div>
+
+<div class="category-box" data-title="Moderniser vos chemises 🌜" data-description="Donne une nouvelle chance a vos anciennes chemises ! Coupe, couds et ajuste pour créer une tenue chic et confortable à partir d’un simple vêtement. Un projet créatif à essayer sans hésiter."
+data-type="mode-accessoires" data-material="textiles-vetements">
+<iframe width="100%" height="120" src="https://www.youtube.com/embed/_Q-P6ZUbkDI?si=AVZI41O5uamogCgr" frameborder="0" allowfullscreen></iframe>
+<div class="video-details">
+   <div class="rating"></div>
+   <button class="favorite-btn">&#10084;</button>
+</div>
+</div>
+                <!-- Tissu de sac en plastique 🛍️ -->
+                <div class="category-box" data-title="Tissu de sac en plastique 🛍️" data-description="Les sacs en plastique peuvent être transformés en un tissu résistant et imperméable ! Apprends comment les fusionner pour créer un matériau réutilisable, idéal pour fabriquer des sacs, pochettes ou même des sets de table."
+                     data-type="mode-accessoires" data-material="verre-plastique">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/qTrsFgGBwcs?si=FUiFBAs8gTqR-kBv" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+
+                <!-- Relooking de meubles🗄️ -->
+                <div class="category-box" data-title="Relooking de meubles🗄️" data-description="Un meuble vieilli ou abîmé peut retrouver tout son éclat avec un bon relooking ! Peinture, customisation, nouvelles poignées ou détournement d’usage, découvre des idées simples pour transformer tes vieux meubles en pièces tendance et originales."
+                     data-type="deco-ameublement" data-material="bois-palettes">
+                    <iframe width="100%" height="120" src="https://www.youtube.com/embed/Idxn40JXItM?si=xom7fwWIVPsLHsZ6" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-details">
+                        <div class="rating"></div>
+                        <button class="favorite-btn">&#10084;</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="hide-upcycling-container" class="button-container" style="display: none;">
+                <button id="hide-upcycling-btn">Moins d'idées ▲</button>
+            </div>
+            
+        </section>
+    </main>
+    <div id="login-error-message">
+        Veuillez vous connecter pour accéder à cette fonctionnalité.<a href="account.html">Cliquez ici!</a>
+    </div>
+    
+
+    
+
+    <script>
+// Function to check if the user is logged in
+function isUserLoggedIn() {
+    return localStorage.getItem("isLoggedIn") === "true" && localStorage.getItem("isGuest") !== "true";
+}
+
+// Function to check if the user is in guest mode
+function isGuestMode() {
+    return localStorage.getItem("isGuest") === "true";
+}
+
+// Function to display a login message
+function showLoginMessage() {
+    const loginErrorMessage = document.getElementById("login-error-message");
+    if (loginErrorMessage) {
+        loginErrorMessage.style.display = "block";
+        setTimeout(() => {
+            loginErrorMessage.style.display = "none";
+        }, 3000); // Hide the message after 3 seconds
+    }
+}
+
+// Get the profile icon element
+const profileIcon = document.getElementById('profile-icon');
+
+// Add a click event listener to the profile icon
+profileIcon.addEventListener('click', (event) => {
+    // Check if the user is not logged in
+    if (!isUserLoggedIn()) {
+        event.preventDefault(); // Prevent the default link behavior
+        window.location.href = 'account.html'; // Redirect to the registration page
+    }
+});
+
+// JavaScript for Filter Functionality
+const filterBtn = document.getElementById('filter-btn');
+const filterMenu = document.getElementById('filter-menu');
+const typeSubcategories = document.getElementById('type-subcategories');
+const materialSubcategories = document.getElementById('material-subcategories');
+const filterOptions = document.querySelectorAll('.filter-option');
+const resetFilterBtn = document.getElementById('reset-filter');
+
+// Open/close the main menu with "BY TYPE" and "BY MATERIAL"
+filterBtn.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent click propagation
+    filterMenu.classList.toggle('hidden'); // Show/hide the main menu
+    typeSubcategories.classList.add('hidden'); // Hide "BY TYPE" submenu
+    materialSubcategories.classList.add('hidden'); // Hide "BY MATERIAL" submenu
+});
+
+// Handle clicks on "BY TYPE" and "BY MATERIAL"
+filterOptions.forEach(option => {
+    option.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevent click propagation
+
+        const filterType = option.dataset.filter;
+        if (filterType === 'type') {
+            typeSubcategories.classList.toggle('hidden'); // Open/close "BY TYPE" submenu
+            materialSubcategories.classList.add('hidden'); // Close "BY MATERIAL" submenu
+        } else if (filterType === 'material') {
+            materialSubcategories.classList.toggle('hidden'); // Open/close "BY MATERIAL" submenu
+            typeSubcategories.classList.add('hidden'); // Close "BY TYPE" submenu
+        } else if (option.dataset.type) {
+            filterByType(option.dataset.type); // Apply filter by type
+        } else if (option.dataset.material) {
+            filterByMaterial(option.dataset.material); // Apply filter by material
+        }
+    });
+});
+
+// Reset filtering
+resetFilterBtn.addEventListener('click', () => {
+    const projects = document.querySelectorAll('.category-box');
+    projects.forEach(project => {
+        project.style.display = 'block'; // Show all projects
+    });
+    filterMenu.classList.add('hidden'); // Close the filter menu
+});
+
+// Close menus if the user clicks outside
+document.addEventListener('click', () => {
+    filterMenu.classList.add('hidden'); // Close the main menu
+    typeSubcategories.classList.add('hidden'); // Close "BY TYPE" submenu
+    materialSubcategories.classList.add('hidden'); // Close "BY MATERIAL" submenu
+});
+
+// Function to filter by type
+function filterByType(type) {
+    const projects = document.querySelectorAll('.category-box');
+    projects.forEach(project => {
+        if (project.dataset.type === type) {
+            project.style.display = 'block'; // Show matching projects
+        } else {
+            project.style.display = 'none'; // Hide other projects
+        }
+    });
+
+    // Hide the "More ideas" button when applying a filter
+    showUpcyclingBtn.style.display = 'none';
+
+    // Show all matching projects directly
+    upcyclingSection.style.display = 'block';
+}
+
+// Function to filter by material
+function filterByMaterial(material) {
+    const projects = document.querySelectorAll('.category-box');
+    projects.forEach(project => {
+        if (project.dataset.material === material) {
+            project.style.display = 'block'; // Show matching projects
+        } else {
+            project.style.display = 'none'; // Hide other projects
+        }
+    });
+
+    // Hide the "More ideas" button when applying a filter
+    showUpcyclingBtn.style.display = 'none';
+
+    // Show all matching projects directly
+    upcyclingSection.style.display = 'block';
+}
+
+// Slider functionality
+const slider = document.querySelector('.slider');
+const sliderBoxes = document.querySelectorAll('.slider-box');
+const boxWidth = sliderBoxes[0].offsetWidth + 20; // Width of one box + gap
+let currentPosition = 0;
+// Dynamically set the slider width based on the number of boxes
+slider.style.width = `${sliderBoxes.length * boxWidth}px`;
+
+function slideLeft() {
+    if (currentPosition < 0) {
+        currentPosition += boxWidth;
+        slider.style.transform = `translateX(${currentPosition}px)`;
+    }
+}
+
+function slideRight() {
+    if (currentPosition > -((sliderBoxes.length - 3) * boxWidth)) {
+        currentPosition -= boxWidth;
+        slider.style.transform = `translateX(${currentPosition}px)`;
+    }
+}
+
+// Function to save project to favorites for a specific user
+function saveProjectToFavorites(project) {
+    const currentUser = localStorage.getItem("currentUser");
+    if (!currentUser) return;
+
+    const title = project.dataset.title;
+    const iframe = project.querySelector('iframe');
+    const videoUrl = iframe.src; // Get the video URL
+
+    console.log("Saving project to favorites:", title, videoUrl); // Debugging
+
+    const projectData = {
+        title: title,
+        videoUrl: videoUrl, // Save the video URL
+        isFavorite: true
+    };
+    const userFavorites = JSON.parse(localStorage.getItem(`favorites-${currentUser}`)) || {};
+    userFavorites[title] = projectData;
+    localStorage.setItem(`favorites-${currentUser}`, JSON.stringify(userFavorites));
+}
+
+// Function to remove a project from favorites for a specific user
+function removeProjectFromFavorites(title) {
+    const currentUser = localStorage.getItem("currentUser");
+    if (!currentUser) return;
+
+    const userFavorites = JSON.parse(localStorage.getItem(`favorites-${currentUser}`)) || {};
+    delete userFavorites[title];
+    localStorage.setItem(`favorites-${currentUser}`, JSON.stringify(userFavorites));
+}
+
+// Function to toggle favorite status
+function toggleFavorite(favoriteBtn, event, isPopup = false) {
+    if (isGuestMode()) {
+        showLoginMessage();
+        return; // Stop execution if the user is in guest mode
+    }
+
+    event.stopPropagation(); // Prevent event from bubbling to the container
+    favoriteBtn.classList.toggle('active');
+    const isFavorite = favoriteBtn.classList.contains('active');
+    const project = favoriteBtn.closest('.slider-box, .category-box');
+    const title = project.dataset.title;
+
+    if (isFavorite) {
+        saveProjectToFavorites(project); // Save the project to favorites
+    } else {
+        removeProjectFromFavorites(title); // Remove the project from favorites
+    }
+
+    // Sync favorite state with the other component (container or popup)
+    if (isPopup) {
+        // If this is the popup, update the container's favorite button
+        const containerBox = document.querySelector(`.slider-box[data-title="${title}"], .category-box[data-title="${title}"]`);
+        if (containerBox) {
+            const containerFavoriteBtn = containerBox.querySelector('.favorite-btn');
+            containerFavoriteBtn.classList.toggle('active', isFavorite);
+        }
+    } else {
+        // If this is the container, update the popup's favorite button (if open)
+        const popupBox = document.querySelector(`#video-popup[data-title="${title}"]`);
+        if (popupBox) {
+            const popupFavoriteBtn = popupBox.querySelector('.favorite-btn');
+            popupFavoriteBtn.classList.toggle('active', isFavorite);
+        }
+    }
+}
+
+// Function to create rating stars for a specific user
+function createRatingStars(ratingContainer, initialRating = 0, title, isPopup = false) {
+    ratingContainer.innerHTML = ''; // Clear existing stars
+    for (let i = 1; i <= 5; i++) {
+        const star = document.createElement('span');
+        star.classList.add('star');
+        star.innerHTML = '&#9733;';
+        star.dataset.value = i;
+        if (i <= initialRating) {
+            star.classList.add('active');
+        }
+        star.addEventListener('click', (event) => {
+            if (isGuestMode()) {
+                showLoginMessage(); // Show a message if the user is in guest mode
+                return; // Stop execution if the user is in guest mode
+            }
+
+            event.stopPropagation(); // Prevent click propagation
+            const stars = ratingContainer.querySelectorAll('.star');
+            stars.forEach((s, index) => {
+                if (index < i) {
+                    s.classList.add('active');
+                } else {
+                    s.classList.remove('active');
+                }
+            });
+            // Save the rating to localStorage for the specific user
+            const currentUser = localStorage.getItem("currentUser");
+            if (currentUser) {
+                const userRatings = JSON.parse(localStorage.getItem(`ratings-${currentUser}`)) || {};
+                userRatings[title] = i;
+                localStorage.setItem(`ratings-${currentUser}`, JSON.stringify(userRatings));
+            }
+
+            // Update the rating in the container if in the popup
+            if (isPopup) {
+                updateRatingInContainer(title, i);
+            }
+        });
+        ratingContainer.appendChild(star);
+    }
+}
+
+// Function to update rating in the container for a specific user
+function updateRatingInContainer(title, newRating) {
+    const containerBox = document.querySelector(`.slider-box[data-title="${title}"], .category-box[data-title="${title}"]`);
+    if (containerBox) {
+        const ratingContainer = containerBox.querySelector('.rating');
+        createRatingStars(ratingContainer, newRating, title);
+    }
+}
+
+// Initialize favorite buttons and ratings for the logged-in user
+document.querySelectorAll('.slider-box, .category-box').forEach(box => {
+    const favoriteBtn = box.querySelector('.favorite-btn');
+    const ratingContainer = box.querySelector('.rating');
+    const title = box.dataset.title;
+    const currentUser = localStorage.getItem("currentUser");
+
+    // Initialize favorite button for the specific user
+    if (currentUser) {
+        const userFavorites = JSON.parse(localStorage.getItem(`favorites-${currentUser}`)) || {};
+        if (userFavorites[title]) {
+            favoriteBtn.classList.add('active');
+        }
+    }
+    favoriteBtn.addEventListener('click', (event) => toggleFavorite(favoriteBtn, event));
+
+    // Initialize rating stars for the specific user
+    if (currentUser) {
+        const userRatings = JSON.parse(localStorage.getItem(`ratings-${currentUser}`)) || {};
+        const savedRating = userRatings[title] || 0;
+        createRatingStars(ratingContainer, parseInt(savedRating), title);
+    } else {
+        createRatingStars(ratingContainer, 0, title); // Show empty stars for guest users
+    }
+});
+
+// Popup functionality
+const popup = document.getElementById('video-popup');
+const popupVideo = document.getElementById('popup-video');
+const popupTitle = document.getElementById('popup-title');
+const popupDescription = document.getElementById('popup-description');
+const popupRating = popup.querySelector('.rating');
+const popupFavoriteBtn = popup.querySelector('.favorite-btn');
+
+document.querySelectorAll('.slider-box, .category-box').forEach(box => {
+    box.addEventListener('click', (event) => {
+        // Ensure the click is not on the stars or heart
+        if (!event.target.classList.contains('star') && !event.target.classList.contains('favorite-btn')) {
+            const iframe = box.querySelector('iframe');
+            const title = box.dataset.title;
+            const description = box.dataset.description;
+            const currentUser = localStorage.getItem("currentUser");
+
+            let rating = 0;
+            let isFavorite = false;
+            if (currentUser) {
+                const userRatings = JSON.parse(localStorage.getItem(`ratings-${currentUser}`)) || {};
+                rating = userRatings[title] || 0;
+
+                const userFavorites = JSON.parse(localStorage.getItem(`favorites-${currentUser}`)) || {};
+                isFavorite = userFavorites[title] ? true : false;
+            }
+
+            popupVideo.src = iframe.src;
+            popupTitle.textContent = title;
+            popupDescription.textContent = description;
+
+            // Initialize popup rating stars
+            createRatingStars(popupRating, rating, title, true);
+
+            // Initialize popup favorite button
+            popupFavoriteBtn.classList.toggle('active', isFavorite);
+            popupFavoriteBtn.onclick = (event) => toggleFavorite(popupFavoriteBtn, event, true);
+
+            // Load and display comments
+            displayComments(title);
+
+            popup.classList.remove('hidden');
+        }
+    });
+});
+
+function closePopup() {
+    popup.classList.add('hidden');
+}
+
+// Function to add a comment
+function addComment(videoTitle, comment) {
+    const currentUser = localStorage.getItem("currentUser");
+    if (!currentUser) return;
+
+    const commentsKey = `comments-${currentUser}-${videoTitle}`;
+    let comments = JSON.parse(localStorage.getItem(commentsKey)) || [];
+    comments.push(comment);
+    localStorage.setItem(commentsKey, JSON.stringify(comments));
+}
+
+// Function to load comments
+function loadComments(videoTitle) {
+    const currentUser = localStorage.getItem("currentUser");
+    if (!currentUser) return [];
+
+    const commentsKey = `comments-${currentUser}-${videoTitle}`;
+    return JSON.parse(localStorage.getItem(commentsKey)) || [];
+}
+
+// Function to delete a comment
+function deleteComment(videoTitle, index) {
+    const currentUser = localStorage.getItem("currentUser");
+    if (!currentUser) return;
+
+    const commentsKey = `comments-${currentUser}-${videoTitle}`;
+    let comments = JSON.parse(localStorage.getItem(commentsKey)) || [];
+    comments.splice(index, 1); // Delete the comment at the given index
+    localStorage.setItem(commentsKey, JSON.stringify(comments));
+}
+
+// Function to display comments in the popup
+function displayComments(videoTitle) {
+    const commentsContainer = document.getElementById('comments-container');
+    commentsContainer.innerHTML = ''; // Clear previous comments
+
+    const comments = loadComments(videoTitle);
+    comments.forEach((comment, index) => {
+        const commentElement = document.createElement('div');
+        commentElement.classList.add('comment');
+
+        // Comment text
+        const commentText = document.createElement('span');
+        commentText.textContent = comment;
+        commentElement.appendChild(commentText);
+
+        // Delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.classList.add('delete-comment-btn');
+        deleteButton.addEventListener('click', () => {
+            deleteComment(videoTitle, index);
+            displayComments(videoTitle); // Reload comments after deletion
+        });
+
+        commentElement.appendChild(deleteButton);
+        commentsContainer.appendChild(commentElement);
+    });
+}
+
+// Handle comment submission
+document.getElementById('submit-comment').addEventListener('click', () => {
+    if (isGuestMode()) {
+        showLoginMessage();
+        return; // Stop execution if the user is in guest mode
+    }
+
+    const commentBox = document.getElementById('comment-box');
+    const comment = commentBox.value.trim();
+    if (comment) {
+        const videoTitle = popupTitle.textContent;
+        addComment(videoTitle, comment);
+        displayComments(videoTitle); // Reload and display comments
+        commentBox.value = ''; // Clear the text area
+    }
+});
+
+// Get elements
+const showUpcyclingBtn = document.getElementById('show-upcycling-btn');
+const hideUpcyclingBtn = document.getElementById('hide-upcycling-btn');
+const upcyclingSection = document.getElementById('upcycling-section');
+const hideUpcyclingContainer = document.getElementById('hide-upcycling-container');
+
+// Handle click on "More ideas"
+showUpcyclingBtn.addEventListener('click', function() {
+    upcyclingSection.style.display = 'block'; // Show the section
+    hideUpcyclingContainer.style.display = 'block'; // Show the "Less ideas" button
+    this.style.display = 'none'; // Hide the "More ideas" button
+});
+
+// Handle click on "Less ideas"
+hideUpcyclingBtn.addEventListener('click', function() {
+    upcyclingSection.style.display = 'none'; // Hide the section
+    hideUpcyclingContainer.style.display = 'none'; // Hide the "Less ideas" button
+    showUpcyclingBtn.style.display = 'block'; // Show the "More ideas" button
+});
+    </script>
+</body>
+</html>
